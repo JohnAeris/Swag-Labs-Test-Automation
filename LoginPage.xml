@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="LoginPageSuite">
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="LoginPageTest">
     <classes>
       <class name="LoginPage.TS_LOGIN_PAGE_01"/>
     </classes>
