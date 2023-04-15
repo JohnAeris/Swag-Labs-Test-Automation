@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNGListenerSuite">
+	<listeners>
+		<listener class-name="LoginPage.Listeners"></listener>
+	</listeners>
+	
+	<test name="SwagLabs">
+		<classes>
+			<class name="LoginPage.TS_LOGIN_PAGE_01">
+				<methods>
+					<include name="TC_LP_00"/>
+					<include name="TC_LP_01"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
