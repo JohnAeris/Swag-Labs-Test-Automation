@@ -1,6 +1,6 @@
 package LoginPage;
 
-import org.testng.annotations.AfterClass;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -30,6 +30,12 @@ public class TS_LOGIN_PAGE_01 {
 		driver.quit();
 	}
 	
+	// On Test Skip
+	public static void skipTest(String testCase) {
+		System.out.println(testCase + " ---------- Test Skipped");
+	    throw new SkipException("Skipping this test");
+	}
+	
 	@Test // TC_LP_00: Verify the URl
 	void TC_LP_00() {
 		driver.get("https://www.saucedemo.com");
@@ -37,7 +43,7 @@ public class TS_LOGIN_PAGE_01 {
 		String expectedURL = "https://www.saucedemo.com/";
 		String actualURL = driver.getCurrentUrl();
 		
-		softAssert.assertEquals(expectedURL, actualURL, "TC_LP_00 --------- Passed");
+		softAssert.assertEquals(expectedURL, actualURL);
 		
 		softAssert.assertAll();
 	}
@@ -49,10 +55,9 @@ public class TS_LOGIN_PAGE_01 {
 		String expectedTitle = "Swag Labs";
 		String actualTitle = driver.getTitle();
 		
-		softAssert.assertEquals(expectedTitle, actualTitle, "TC_LP_01 --------- Passed");
-		
+		softAssert.assertEquals(expectedTitle, actualTitle);
 		softAssert.assertAll();
 	}
-	
+
 
 }
