@@ -105,6 +105,16 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertTrue(loginButton.isEnabled());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_LP_09: Verify the label of username field
+	void TC_LP_09() {
+		String expectedLabel = "Username";
+		String actualLabel = usernameField.getAttribute("placeholder");
+		System.out.println(actualLabel);
+		
+		softAssert.assertEquals(expectedLabel, actualLabel);
+		softAssert.assertAll();
+	}
 
 
 }
