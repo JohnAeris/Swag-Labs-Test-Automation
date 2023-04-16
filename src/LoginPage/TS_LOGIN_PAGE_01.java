@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class TS_LOGIN_PAGE_01 {
@@ -68,6 +69,16 @@ public class TS_LOGIN_PAGE_01 {
 		String actualTitleHeader = driver.findElement(By.className("login_logo")).getText();
 		
 		softAssert.assertEquals(expectedTitleHeader, actualTitleHeader);
+		softAssert.assertAll();
+	}
+	
+	@Test // TC_LP_03: Verify if username field is presented
+	void TC_LP_03() {
+		driver.get("https://www.saucedemo.com");
+		
+		boolean usernameField = driver.findElement(By.name("user-name")).isDisplayed();
+		softAssert.assertTrue(usernameField);
+		
 		softAssert.assertAll();
 	}
 	
