@@ -29,7 +29,7 @@
 				<methods>
 					<include name="TC_LF_00"/>
 					<include name="TC_LF_01"/>
-
+					<include name="TC_LF_02"/>
 
 
 
