@@ -37,7 +37,10 @@ public class TS_HEADER_02 {
 		loginButton.click();
 	}
 	
-	
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 	
 	
 
