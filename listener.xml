@@ -44,7 +44,8 @@
 			</class>
 			<class name="ProductsPage.TS_PRODUCTS_PAGE_01">
 				<methods>
-					
+					<include name="TC_PP_00"></include>
+					<include name="TC_PP_01"></include>
 				</methods>
 			</class>
 		</classes>
