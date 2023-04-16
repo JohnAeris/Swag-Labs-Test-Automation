@@ -4,6 +4,7 @@
 <suite name="TestNGListenerSuite">
 	<listeners>
 		<listener class-name="LoginPage.Listeners"></listener>
+		<listener class-name="ProductsPage.Listeners"></listener>
 	</listeners>
 	
 	<test name="SwagLabs">
@@ -39,6 +40,11 @@
 					<include name="TC_LF_09"/>
 					<include name="TC_LF_10"/>
 					<include name="TC_LF_11"/>
+				</methods>
+			</class>
+			<class name="ProductsPage.TS_PRODUCTS_PAGE_01">
+				<methods>
+					
 				</methods>
 			</class>
 		</classes>
