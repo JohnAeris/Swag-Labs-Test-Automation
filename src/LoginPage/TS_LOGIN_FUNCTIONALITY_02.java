@@ -177,7 +177,19 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_LF_10: Verify the error message for blank username field
+	void TC_LF_10() throws InterruptedException {
+		usernameField.sendKeys("");
+		passwordField.sendKeys("secret_sauce123");
+		loginButton.click();
+		Thread.sleep(3000);
+				
+		String expectedMessage = "Epic sadface: Username is required";
+		String actualMessage = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[3]/h3[1]")).getText();
+		
+		softAssert.assertEquals(expectedMessage, actualMessage);
+		softAssert.assertAll();
+	}
 	
 
 	
