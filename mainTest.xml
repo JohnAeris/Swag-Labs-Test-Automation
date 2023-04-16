@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MainSuite">
+	<suite-files>
+		<!--<suite-file path="D:\Projects\Test Automation\Swag Labs\src\LoginPage\LoginPage.xml"/>-->
+		<suite-file path="D:\Projects\Test Automation\Swag Labs\src\ProductsPage\ProductsPage.xml"/>
+	</suite-files>
+</suite>
