@@ -1,6 +1,7 @@
 package LoginPage;
 
 import org.testng.SkipException;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -37,7 +38,6 @@ public class TS_LOGIN_PAGE_01 {
 	@AfterMethod
 	public void afterTest() {
 		driver.quit();
-		softAssert.assertAll();
 	}
 	
 	// On Test Skip
@@ -51,6 +51,7 @@ public class TS_LOGIN_PAGE_01 {
 		String expectedURL = "https://www.saucedemo.com/";
 		String actualURL = driver.getCurrentUrl();
 		softAssert.assertEquals(expectedURL, actualURL);
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_01: Verify the Title Page
@@ -58,6 +59,7 @@ public class TS_LOGIN_PAGE_01 {
 		String expectedTitle = "Swag Labs";
 		String actualTitle = driver.getTitle();
 		softAssert.assertEquals(expectedTitle, actualTitle);
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_02: Verify the title in header
@@ -65,26 +67,31 @@ public class TS_LOGIN_PAGE_01 {
 		String expectedTitleHeader = "Swag Labs";
 		String actualTitleHeader = driver.findElement(By.className("login_logo")).getText();
 		softAssert.assertEquals(expectedTitleHeader, actualTitleHeader);
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_03: Verify if username field is presented
 	void TC_LP_03() {
 		softAssert.assertTrue(usernameField.isDisplayed());
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_04: Verify if password field is presented
 	void TC_LP_04() {
 		softAssert.assertTrue(passwordField.isDisplayed());
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_05: Verify if login button is presented
 	void TC_LP_05() {
 		softAssert.assertTrue(loginButton.isDisplayed());
+		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_06: Verify if username field is enabled
 	void TC_LP_06() {
-		softAssert.assertTrue(loginButton.isEnabled());
+		softAssert.assertTrue(usernameField.isEnabled());
+		softAssert.assertAll();
 	}
 	
 	
