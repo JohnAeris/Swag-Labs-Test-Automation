@@ -1,8 +1,11 @@
 package ProductsPage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
 public class TS_PRODUCTS_PAGE_01 {
@@ -16,6 +19,16 @@ public class TS_PRODUCTS_PAGE_01 {
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton;
 	
-	
+	@BeforeMethod
+	public void beforeTest() {
+		driver = new EdgeDriver();
+		driver.get("https://www.saucedemo.com");
+		
+		softAssert = new SoftAssert();
+		
+		usernameField = driver.findElement(By.name("user-name"));
+		passwordField = driver.findElement(By.name("password"));
+		loginButton = driver.findElement(By.name("login-button"));
+	}
 
 }
