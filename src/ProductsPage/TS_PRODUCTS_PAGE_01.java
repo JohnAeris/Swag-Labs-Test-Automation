@@ -58,5 +58,14 @@ public class TS_PRODUCTS_PAGE_01 {
 		softAssert.assertEquals(expectedPage, actualPage);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_PP_01: Verify the title page
+	void TC_PP_01() {
+		
+		String expectedTitle = "Swag Labs";
+		String actualTitle = driver.getTitle();
+		softAssert.assertEquals(expectedTitle, actualTitle);
+		softAssert.assertAll();
+	}
 
 }
