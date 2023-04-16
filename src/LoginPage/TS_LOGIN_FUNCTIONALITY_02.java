@@ -191,7 +191,19 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_LF_11: Verify the error message for blank password field
+	void TC_LF_11() throws InterruptedException {
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("");
+		loginButton.click();
+		Thread.sleep(3000);
+				
+		String expectedMessage = "Epic sadface: Password is required";
+		String actualMessage = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[3]/h3[1]")).getText();
+		
+		softAssert.assertEquals(expectedMessage, actualMessage);
+		softAssert.assertAll();
+	}
 	
 
 }
