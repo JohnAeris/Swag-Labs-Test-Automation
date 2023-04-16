@@ -31,6 +31,10 @@ public class TS_PRODUCTS_PAGE_01 {
 		usernameField = driver.findElement(By.name("user-name"));
 		passwordField = driver.findElement(By.name("password"));
 		loginButton = driver.findElement(By.name("login-button"));
+		
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("secret_sauce");
+		loginButton.click();
 	}
 	
 	@AfterMethod
@@ -43,5 +47,7 @@ public class TS_PRODUCTS_PAGE_01 {
 		System.out.println(testCase + " ---------- Test Skipped");
 		throw new SkipException("Skipping this test");
 	}
+	
+	
 
 }
