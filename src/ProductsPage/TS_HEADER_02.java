@@ -109,6 +109,16 @@ public class TS_HEADER_02 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_H_07: Verify if the cart icon has correct number of added items
+	void TC_H_07() {
+		driver.findElement(By.name("add-to-cart-sauce-labs-backpack")).click();
+		driver.findElement(By.name("add-to-cart-sauce-labs-bike-light")).click();
+		
+		String expectedItem = "2";
+		String actualItem = driver.findElement(By.className("shopping_cart_badge")).getText();
+		
+		softAssert.assertEquals(expectedItem, actualItem);
+		softAssert.assertAll();
+	}
 
 }

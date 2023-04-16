@@ -57,7 +57,7 @@
 					<include name="TC_H_04"></include>
 					<include name="TC_H_05"></include>
 					<include name="TC_H_06"></include>
-					
+					<include name="TC_H_07"></include>
 				</methods>
 			</class>
 		</classes>
