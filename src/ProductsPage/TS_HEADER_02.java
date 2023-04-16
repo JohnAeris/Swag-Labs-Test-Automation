@@ -98,7 +98,16 @@ public class TS_HEADER_02 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_H_06: Verify if the cart icon is working
+	void TC_H_06() {
+		cartIcon.click();
+		
+		String expectedPage = "https://www.saucedemo.com/cart.html";
+		String actualPage = driver.getCurrentUrl();
+		
+		softAssert.assertEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 	
 
 
