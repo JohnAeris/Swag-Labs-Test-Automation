@@ -115,6 +115,16 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertEquals(expectedLabel, actualLabel);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_LP_10: Verify the label of password field
+	void TC_LP_10() {
+		String expectedLabel = "Password";
+		String actualLabel = passwordField.getAttribute("placeholder");
+		System.out.println(actualLabel);
+		
+		softAssert.assertEquals(expectedLabel, actualLabel);
+		softAssert.assertAll();
+	}
 
 
 }
