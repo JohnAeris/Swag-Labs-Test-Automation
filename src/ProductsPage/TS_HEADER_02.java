@@ -8,6 +8,7 @@ import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class TS_HEADER_02 {
@@ -20,9 +21,10 @@ public class TS_HEADER_02 {
 	private WebDriver driver;
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton;
+	private WebElement menuButton, cartIcon;
 	
 	@BeforeMethod
-	public void beforeTest() {
+	public void beforeTest() throws InterruptedException {
 		driver = new EdgeDriver();
 		driver.get("https://www.saucedemo.com");
 		
@@ -35,6 +37,10 @@ public class TS_HEADER_02 {
 		usernameField.sendKeys("standard_user");
 		passwordField.sendKeys("secret_sauce");
 		loginButton.click();
+		
+		menuButton = driver.findElement(By.id("react-burger-menu-btn"));
+		cartIcon = driver.findElement(By.id("shopping_cart_container"));
+		
 	}
 	
 	@AfterMethod
@@ -47,5 +53,29 @@ public class TS_HEADER_02 {
 		System.out.println(testCase + " ---------- Test Skipped");
 		throw new SkipException("Skipping this test");
 	}
+	
+	@Test // TC_H_00: Verify the title in header
+	void TC_H_00() {
+		
+		String expectedTitleHeader = "Swag Labs";
+		String actualTitleHeader = driver.findElement(By.className("app_logo")).getText();
+		
+		softAssert.assertEquals(expectedTitleHeader, actualTitleHeader);
+		softAssert.assertAll();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 
 }

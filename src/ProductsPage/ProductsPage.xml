@@ -4,6 +4,7 @@
   <test thread-count="5" name="ProductsPageTest">
 	<classes>
 		<class name="ProductsPage.TS_PRODUCTS_PAGE_01"/>
+		<class name="ProductsPage.TS_HEADER_02"/>
 	</classes>
   </test> <!-- ProductsPageTest -->
 </suite> <!-- ProductsPageSuite -->

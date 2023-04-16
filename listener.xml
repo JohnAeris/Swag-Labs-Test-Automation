@@ -48,6 +48,18 @@
 					<include name="TC_PP_01"></include>
 				</methods>
 			</class>
+			<class name="ProductsPage.TS_HEADER_02">
+				<methods>
+					<include name="TC_H_00"></include>
+					
+					
+					
+					
+					
+					
+					
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
