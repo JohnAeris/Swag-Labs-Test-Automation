@@ -8,6 +8,7 @@ import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class TS_PRODUCTS_PAGE_01 {
@@ -48,6 +49,14 @@ public class TS_PRODUCTS_PAGE_01 {
 		throw new SkipException("Skipping this test");
 	}
 	
-	
+	@Test // TC_PP_00: Verify the url
+	void TC_PP_00() {
+		
+		String expectedPage = "https://www.saucedemo.com/inventory.html";
+		String actualPage = driver.getCurrentUrl();
+		
+		softAssert.assertEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 
 }
