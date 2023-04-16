@@ -94,7 +94,11 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LP_07: Verify if password field is enabled
+	void TC_LP_07() {
+		softAssert.assertTrue(passwordField.isEnabled());
+		softAssert.assertAll();
+	}
 
 
 }

@@ -17,9 +17,10 @@
 					<include name="TC_LP_04"/>
 					<include name="TC_LP_05"/>
 					<include name="TC_LP_06"/>
+					<include name="TC_LP_07"/>
 					
 					<!--
-					<include name="TC_LP_07"/>`
+					
 					<include name="TC_LP_08"/>
 					<include name="TC_LP_09"/>
 					<include name="TC_LP_10"/>
