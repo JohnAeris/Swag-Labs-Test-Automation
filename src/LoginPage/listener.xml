@@ -21,16 +21,15 @@
 					<include name="TC_LP_08"/>
 					<include name="TC_LP_09"/>
 					<include name="TC_LP_10"/>
+					<include name="TC_LP_11"/>
 					-->
 					
 					
 					
-					<include name="TC_LP_11"/>
 					
+					<include name="TC_LP_12"/>
 					
-					<!--
-					<include name="TC_LP_11"/>
-					<include name="TC_LP_12"/>-->
+
 				</methods>
 			</class>
 		</classes>

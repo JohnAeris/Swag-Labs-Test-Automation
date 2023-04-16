@@ -110,7 +110,6 @@ public class TS_LOGIN_PAGE_01 {
 	void TC_LP_09() {
 		String expectedLabel = "Username";
 		String actualLabel = usernameField.getAttribute("placeholder");
-		System.out.println(actualLabel);
 		
 		softAssert.assertEquals(expectedLabel, actualLabel);
 		softAssert.assertAll();
@@ -120,7 +119,6 @@ public class TS_LOGIN_PAGE_01 {
 	void TC_LP_10() {
 		String expectedLabel = "Password";
 		String actualLabel = passwordField.getAttribute("placeholder");
-		System.out.println(actualLabel);
 		
 		softAssert.assertEquals(expectedLabel, actualLabel);
 		softAssert.assertAll();
@@ -130,9 +128,21 @@ public class TS_LOGIN_PAGE_01 {
 	void TC_LP_11() {
 		String expectedLabel = "Login";
 		String actualLabel = loginButton.getAttribute("value");
-		System.out.println(actualLabel);
 		
 		softAssert.assertEquals(expectedLabel, actualLabel);
+		softAssert.assertAll();
+	}
+	
+	@Test // TC_LP_12: Verify if the login button is working
+	void TC_LP_12() {
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("secret_sauce");
+		loginButton.click();
+		
+		String expectedPage = "https://www.saucedemo.com/inventory.html";
+		String actualPage = driver.getCurrentUrl();
+		
+		softAssert.assertEquals(expectedPage, actualPage);
 		softAssert.assertAll();
 	}
 
