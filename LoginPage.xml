@@ -4,6 +4,7 @@
   <test thread-count="5" name="LoginPageTest">
     <classes>
       <class name="LoginPage.TS_LOGIN_PAGE_01"/>
+      <class name="LoginPage.TS_LOGIN_FUNCTIONALITY_02"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
