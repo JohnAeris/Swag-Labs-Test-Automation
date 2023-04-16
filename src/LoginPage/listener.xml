@@ -10,18 +10,18 @@
 		<classes>
 			<class name="LoginPage.TS_LOGIN_PAGE_01">
 				<methods>
-					<include name="TC_LP_00"/>
+					<!--<include name="TC_LP_00"/>
 					<include name="TC_LP_01"/>
 					<include name="TC_LP_02"/>
 					<include name="TC_LP_03"/>
 					<include name="TC_LP_04"/>
 					<include name="TC_LP_05"/>
 					<include name="TC_LP_06"/>
-					<include name="TC_LP_07"/>
-					
-					<!--
+					<include name="TC_LP_07"/>-->
 					
 					<include name="TC_LP_08"/>
+					
+					<!--
 					<include name="TC_LP_09"/>
 					<include name="TC_LP_10"/>
 					<include name="TC_LP_11"/>

@@ -99,6 +99,12 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertTrue(passwordField.isEnabled());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_LP_08: Verify if login button is enabled
+	void TC_LP_08() {
+		softAssert.assertTrue(loginButton.isEnabled());
+		softAssert.assertAll();
+	}
 
 
 }
