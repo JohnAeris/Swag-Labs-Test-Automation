@@ -8,7 +8,7 @@
 	
 	<test name="SwagLabs">
 		<classes>
-			<class name="LoginPage.TS_LOGIN_PAGE_01">
+			<!--<class name="LoginPage.TS_LOGIN_PAGE_01">
 				<methods>
 					<include name="TC_LP_00"/>
 					<include name="TC_LP_01"/>
@@ -24,6 +24,9 @@
 					<include name="TC_LP_11"/>
 					<include name="TC_LP_12"/>
 				</methods>
+			</class>-->
+			<class name="LoginPage.TS_LOGIN_FUNCTIONALITY_02">
+				
 			</class>
 		</classes>
 	</test>
