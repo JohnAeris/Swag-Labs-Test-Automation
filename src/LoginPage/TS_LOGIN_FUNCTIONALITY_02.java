@@ -59,7 +59,18 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_LF_01: Login with correct username and incorrect password
+	void TC_LF_01() {
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("secret_sauce123");
+		loginButton.click();
+		
+		String expectedPage = "https://www.saucedemo.com/inventory.html";
+		String actualPage = driver.getCurrentUrl();
+		
+		softAssert.assertNotEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 	
 
 	

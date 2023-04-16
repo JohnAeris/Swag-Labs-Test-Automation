@@ -28,7 +28,7 @@
 			<class name="LoginPage.TS_LOGIN_FUNCTIONALITY_02">
 				<methods>
 					<include name="TC_LF_00"/>
-
+					<include name="TC_LF_01"/>
 
 
 
