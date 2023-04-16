@@ -33,7 +33,10 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 		loginButton = driver.findElement(By.name("login-button"));
 	}
 	
-	
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 	
 	
 	
