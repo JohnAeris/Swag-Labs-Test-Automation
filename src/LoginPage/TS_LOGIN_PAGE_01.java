@@ -82,6 +82,16 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertAll();
 	}
 	
+	@Test // TC_LP_04: Verify if password field is presented
+	void TC_LP_04() {
+		driver.get("https://www.saucedemo.com");
+		
+		boolean passwordField = driver.findElement(By.name("password")).isDisplayed();
+		softAssert.assertTrue(passwordField);
+		
+		softAssert.assertAll();
+	}
+	
 	
 
 
