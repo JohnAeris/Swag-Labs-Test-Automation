@@ -163,7 +163,19 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_LF_09: Verify the error message when username and password do not match
+	void TC_LF_09() throws InterruptedException {
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("secret_sauce123");
+		loginButton.click();
+		Thread.sleep(3000);
+				
+		String expectedMessage = "Epic sadface: Username and password do not match any user in this service";
+		String actualMessage = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[3]/h3[1]")).getText();
+		
+		softAssert.assertEquals(expectedMessage, actualMessage);
+		softAssert.assertAll();
+	}
 	
 
 	
