@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
@@ -29,6 +30,11 @@ public class TS_PRODUCTS_PAGE_01 {
 		usernameField = driver.findElement(By.name("user-name"));
 		passwordField = driver.findElement(By.name("password"));
 		loginButton = driver.findElement(By.name("login-button"));
+	}
+	
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
 	}
 
 }
