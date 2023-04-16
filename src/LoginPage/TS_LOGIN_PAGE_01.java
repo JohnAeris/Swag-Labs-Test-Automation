@@ -92,6 +92,16 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertAll();
 	}
 	
+	@Test // TC_LP_05: Verify if login button is presented
+	void TC_LP_05() {
+		driver.get("https://www.saucedemo.com");
+		
+		boolean loginButton = driver.findElement(By.name("login-button")).isDisplayed();
+		softAssert.assertTrue(loginButton);
+		
+		softAssert.assertAll();
+	}
+	
 	
 
 
