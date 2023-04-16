@@ -1,8 +1,11 @@
 package ProductsPage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
 public class TS_LEFT_MENU_NAVIGATION_03 {
@@ -16,5 +19,24 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton;
 	private WebElement menuButton;
+	
+	@BeforeMethod
+	public void beforeTest() throws InterruptedException {
+		driver = new EdgeDriver();
+		driver.get("https://www.saucedemo.com");
+		
+		softAssert = new SoftAssert();
+		
+		usernameField = driver.findElement(By.name("user-name"));
+		passwordField = driver.findElement(By.name("password"));
+		loginButton = driver.findElement(By.name("login-button"));
+		
+		usernameField.sendKeys("standard_user");
+		passwordField.sendKeys("secret_sauce");
+		loginButton.click();
+		
+		menuButton = driver.findElement(By.id("react-burger-menu-btn"));
+		
+	}
 
 }
