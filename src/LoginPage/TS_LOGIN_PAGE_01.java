@@ -125,6 +125,16 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertEquals(expectedLabel, actualLabel);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_LP_11: Verify the label of login button
+	void TC_LP_11() {
+		String expectedLabel = "Login";
+		String actualLabel = loginButton.getAttribute("value");
+		System.out.println(actualLabel);
+		
+		softAssert.assertEquals(expectedLabel, actualLabel);
+		softAssert.assertAll();
+	}
 
 
 }
