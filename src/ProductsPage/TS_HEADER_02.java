@@ -70,7 +70,11 @@ public class TS_HEADER_02 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_H_02: Verify if the cart icon is presented
+	void TC_H_02() {
+		softAssert.assertTrue(cartIcon.isDisplayed());
+		softAssert.assertAll();
+	}
 	
 	
 	
