@@ -21,7 +21,17 @@ public class TS_LOGIN_FUNCTIONALITY_02 {
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton; 
 	
-
+	@BeforeMethod
+	public void beforeTest() {
+		driver = new EdgeDriver();
+		driver.get("https://www.saucedemo.com");
+		
+		softAssert = new SoftAssert();
+		
+		usernameField = driver.findElement(By.name("user-name"));
+		passwordField = driver.findElement(By.name("password"));
+		loginButton = driver.findElement(By.name("login-button"));
+	}
 	
 	
 	
