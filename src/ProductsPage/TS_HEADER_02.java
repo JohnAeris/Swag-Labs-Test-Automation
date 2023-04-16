@@ -76,7 +76,11 @@ public class TS_HEADER_02 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_H_03: Verify if the hamburger menu button is enabled
+	void TC_H_03() {
+		softAssert.assertTrue(menuButton.isEnabled());
+		softAssert.assertAll();
+	}
 	
 	
 	
