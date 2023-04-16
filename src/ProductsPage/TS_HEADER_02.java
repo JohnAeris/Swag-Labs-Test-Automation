@@ -88,7 +88,15 @@ public class TS_HEADER_02 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_H_05: Verify if the hamburger button is working
+	void TC_H_05() {
+		menuButton.click();
+		
+		boolean leftNavigation = driver.findElement(By.className("bm-menu")).isDisplayed();
+		
+		softAssert.assertTrue(leftNavigation);
+		softAssert.assertAll();
+	}
 	
 	
 	
