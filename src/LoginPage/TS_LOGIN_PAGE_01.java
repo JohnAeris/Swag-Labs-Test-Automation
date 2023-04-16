@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -58,6 +59,19 @@ public class TS_LOGIN_PAGE_01 {
 		softAssert.assertEquals(expectedTitle, actualTitle);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_LP_02: Verify the title in header
+	void TC_LP_02() {
+		driver.get("https://www.saucedemo.com");
+		
+		String expectedTitleHeader = "Swag Labs";
+		String actualTitleHeader = driver.findElement(By.className("login_logo")).getText();
+		
+		softAssert.assertEquals(expectedTitleHeader, actualTitleHeader);
+		softAssert.assertAll();
+	}
+	
+	
 
 
 }

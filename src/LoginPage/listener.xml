@@ -12,6 +12,7 @@
 				<methods>
 					<include name="TC_LP_00"/>
 					<include name="TC_LP_01"/>
+					<include name="TC_LP_02"/>
 				</methods>
 			</class>
 		</classes>
