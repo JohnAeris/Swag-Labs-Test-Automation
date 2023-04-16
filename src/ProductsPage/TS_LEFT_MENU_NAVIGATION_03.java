@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
@@ -37,6 +38,11 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		
 		menuButton = driver.findElement(By.id("react-burger-menu-btn"));
 		
+	}
+	
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
 	}
 
 }
