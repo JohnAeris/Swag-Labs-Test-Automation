@@ -20,16 +20,24 @@ public class TS_LOGIN_PAGE_01 {
 	
 	private WebDriver driver;
 	private SoftAssert softAssert;
+	private WebElement usernameField, passwordField, loginButton; 
 	
 	@BeforeMethod
 	public void beforeTest() {
 		driver = new EdgeDriver();
+		driver.get("https://www.saucedemo.com");
+		
 		softAssert = new SoftAssert();
+		
+		usernameField = driver.findElement(By.name("user-name"));
+		passwordField = driver.findElement(By.name("password"));
+		loginButton = driver.findElement(By.name("login-button"));
 	}
 	
 	@AfterMethod
 	public void afterTest() {
 		driver.quit();
+		softAssert.assertAll();
 	}
 	
 	// On Test Skip
@@ -40,66 +48,43 @@ public class TS_LOGIN_PAGE_01 {
 	
 	@Test // TC_LP_00: Verify the URl
 	void TC_LP_00() {
-		driver.get("https://www.saucedemo.com");
-		
 		String expectedURL = "https://www.saucedemo.com/";
 		String actualURL = driver.getCurrentUrl();
-		
 		softAssert.assertEquals(expectedURL, actualURL);
-		
-		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_01: Verify the Title Page
 	void TC_LP_01() {
-		driver.get("https://www.saucedemo.com");
-		
 		String expectedTitle = "Swag Labs";
 		String actualTitle = driver.getTitle();
-		
 		softAssert.assertEquals(expectedTitle, actualTitle);
-		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_02: Verify the title in header
 	void TC_LP_02() {
-		driver.get("https://www.saucedemo.com");
-		
 		String expectedTitleHeader = "Swag Labs";
 		String actualTitleHeader = driver.findElement(By.className("login_logo")).getText();
-		
 		softAssert.assertEquals(expectedTitleHeader, actualTitleHeader);
-		softAssert.assertAll();
 	}
 	
 	@Test // TC_LP_03: Verify if username field is presented
 	void TC_LP_03() {
-		driver.get("https://www.saucedemo.com");
-		
-		boolean usernameField = driver.findElement(By.name("user-name")).isDisplayed();
-		softAssert.assertTrue(usernameField);
-		
-		softAssert.assertAll();
+		softAssert.assertTrue(usernameField.isDisplayed());
 	}
 	
 	@Test // TC_LP_04: Verify if password field is presented
 	void TC_LP_04() {
-		driver.get("https://www.saucedemo.com");
-		
-		boolean passwordField = driver.findElement(By.name("password")).isDisplayed();
-		softAssert.assertTrue(passwordField);
-		
-		softAssert.assertAll();
+		softAssert.assertTrue(passwordField.isDisplayed());
 	}
 	
 	@Test // TC_LP_05: Verify if login button is presented
 	void TC_LP_05() {
-		driver.get("https://www.saucedemo.com");
-		
-		boolean loginButton = driver.findElement(By.name("login-button")).isDisplayed();
-		softAssert.assertTrue(loginButton);
-		
-		softAssert.assertAll();
+		softAssert.assertTrue(loginButton.isDisplayed());
+	}
+	
+	@Test // TC_LP_06: Verify if username field is enabled
+	void TC_LP_06() {
+		softAssert.assertTrue(loginButton.isEnabled());
 	}
 	
 	
