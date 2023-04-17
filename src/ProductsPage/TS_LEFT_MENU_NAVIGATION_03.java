@@ -125,7 +125,19 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LMN_04: Verify if logout option is working
+	void TC_LMN_04() {
+		menuButton.click();
+		driver.findElement(By.id("logout_sidebar_link")).click();
+		
+		String expectedPage = "https://www.saucedemo.com/";
+		System.out.println(expectedPage);
+		String actualPage = driver.getCurrentUrl();
+		System.out.println(actualPage);
+		
+		softAssert.assertEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 	
 	
 	
