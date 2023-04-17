@@ -60,6 +60,18 @@
 					<include name="TC_H_07"></include>
 				</methods>
 			</class>
+			<class name="ProductsPage.TS_LEFT_MENU_NAVIGATION_03">
+				<methods>
+					<include name="TC_LMN_00"></include>
+					
+					
+					
+					
+				
+					
+					
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
