@@ -139,7 +139,24 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LMN_05: Verify if reset app state is working
+	void TC_LMN_05() {
+		// add items in the cart
+		driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")).click();
+		driver.findElement(By.xpath("//button[@id='remove-sauce-labs-bike-light']")).click();
+		driver.findElement(By.xpath("//button[@id='remove-sauce-labs-bolt-t-shirt']")).click();
+		driver.findElement(By.xpath("//button[@id='remove-sauce-labs-fleece-jacket']")).click();
+		
+		// check the number of items in cart icon (current: 4 items)
+		String initialAppState = cartIcon.findElement(By.tagName("span")).getText();	
+		
+		// click the reset app state option
+		menuButton.click();
+		driver.findElement(By.id("reset_sidebar_link")).click();
+		
+		softAssert.assertEquals(initialAppState, "");
+		softAssert.assertAll();
+	}
 	
 	
 	
