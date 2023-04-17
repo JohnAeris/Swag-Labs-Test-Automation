@@ -72,7 +72,31 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LMN_01: Verify the spelling of all options in menu
+	void TC_LMN_01() {
+		menuButton.click();
+		
+		WebElement navMenu = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/nav[1]"));
+		List<WebElement> menuOptions = navMenu.findElements(By.tagName("a"));
+		List<String> optionList = new ArrayList<>();
+		
+		for (WebElement option : menuOptions) { 
+			String menuOption = option.getText();
+			optionList.add(menuOption);
+		}
+		
+		String actualOption1 = optionList.get(0);
+		String actualOption2 = optionList.get(1);
+		String actualOption3 = optionList.get(2);
+		String actualOption4 = optionList.get(3);
+		
+		softAssert.assertEquals("All Items", actualOption1);
+		softAssert.assertEquals("About", actualOption2);
+		softAssert.assertEquals("Logout", actualOption3);
+		softAssert.assertEquals("Reset App State", actualOption4);
+		softAssert.assertAll();
+
+	}
 	
 	
 	

@@ -63,7 +63,7 @@
 			<class name="ProductsPage.TS_LEFT_MENU_NAVIGATION_03">
 				<methods>
 					<include name="TC_LMN_00"></include>
-					
+					<include name="TC_LMN_01"></include>
 					
 					
 					
