@@ -158,7 +158,13 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LMN_06: Verify if the ekis button is presented
+	void TC_LMN_06() throws InterruptedException {
+		menuButton.click();
+		Thread.sleep(2000);
+		softAssert.assertTrue(closeMenuButton.isDisplayed());
+		softAssert.assertAll();
+	}
 	
 	
 

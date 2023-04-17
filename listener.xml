@@ -68,7 +68,7 @@
 					<include name="TC_LMN_03"></include>
 					<include name="TC_LMN_04"></include>
 					<include name="TC_LMN_05"></include>
-					
+					<include name="TC_LMN_06"></include>
 					
 				</methods>
 			</class>
