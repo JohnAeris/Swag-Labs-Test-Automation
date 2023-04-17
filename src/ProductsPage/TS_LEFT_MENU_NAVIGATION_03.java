@@ -98,7 +98,19 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 
 	}
 	
-	
+	@Test // TC_LMN_02: Verify if all items option is working
+	void TC_LMN_02() {
+		menuButton.click();
+		driver.findElement(By.id("inventory_sidebar_link")).click();
+		
+		String expectedPage = "https://www.saucedemo.com/inventory.html";
+		System.out.println(expectedPage);
+		String actualPage = driver.getCurrentUrl();
+		System.out.println(actualPage);
+		
+		softAssert.assertEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 	
 	
 	
