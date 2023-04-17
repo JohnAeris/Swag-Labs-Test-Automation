@@ -112,7 +112,18 @@ public class TS_LEFT_MENU_NAVIGATION_03 {
 		softAssert.assertAll();
 	}
 	
-	
+	@Test // TC_LMN_03: Verify if about option is working
+	void TC_LMN_03() {
+		menuButton.click();
+		driver.findElement(By.id("about_sidebar_link")).click();
+		
+		String expectedPage = "https://saucelabs.com/";
+		String actualPage = driver.getCurrentUrl();
+		System.out.println(actualPage);
+		
+		softAssert.assertEquals(expectedPage, actualPage);
+		softAssert.assertAll();
+	}
 	
 	
 	
