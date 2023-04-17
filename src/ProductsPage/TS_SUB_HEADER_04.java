@@ -38,7 +38,10 @@ public class TS_SUB_HEADER_04 {
 		
 	}
 	
-
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 	
 
 
