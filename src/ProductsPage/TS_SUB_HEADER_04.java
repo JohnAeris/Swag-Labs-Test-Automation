@@ -75,7 +75,12 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_SH_02: Verify if the filter button is working
+	void TC_SH_02() {
+		int filterOptions = filter.getOptions().size();
+		softAssert.assertEquals(4, filterOptions);
+		softAssert.assertAll();
+	}
 
 	
 

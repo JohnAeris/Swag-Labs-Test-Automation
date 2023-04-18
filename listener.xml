@@ -76,7 +76,7 @@
 				<methods>
 					<include name="TC_SH_00"></include>
 					<include name="TC_SH_01"></include>
-					
+					<include name="TC_SH_02"></include>
 					
 					
 					
