@@ -80,7 +80,7 @@
 					<include name="TC_SH_03"></include>
 					<include name="TC_SH_04"></include>
 					<include name="TC_SH_05"></include>
-					
+					<include name="TC_SH_06"></include>
 					
 					
 				</methods>
