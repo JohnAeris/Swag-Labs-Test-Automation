@@ -217,7 +217,28 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_SH_07: Verify the spelling of all filter options
+	void TC_SH_07() {
+		WebElement filterOptions = driver.findElement(By.className("product_sort_container")); // find the dropdown element
+		List<WebElement> listFilterOptions = filterOptions.findElements(By.tagName("option")); // get the option tagname
+		List<String> listOptions = new ArrayList<>(); // create new list for the container
+		
+		for (WebElement filter : listFilterOptions) { // iterate to each filter option
+			String option = filter.getText(); // get the filter option name
+			listOptions.add(option); // add the filter option in the listOptions
+		}
+		
+		String option1 = listOptions.get(0); // store the filter option 1 in option1 variable
+		String option2 = listOptions.get(1); // store the filter option 2 in option1 variable
+		String option3 = listOptions.get(2); // store the filter option 3 in option1 variable
+		String option4 = listOptions.get(3); // store the filter option 4 in option1 variable
+		
+		softAssert.assertEquals("Name (A to Z)", option1); // compare the filter option 1 to the expected spelling
+		softAssert.assertEquals("Name (Z to A)", option2); // compare the filter option 2 to the expected spelling
+		softAssert.assertEquals("Price (low to high)", option3); // compare the filter option 3 to the expected spelling
+		softAssert.assertEquals("Price (high to low)", option4); // compare the filter option 4 to the expected spelling
+		softAssert.assertAll();
+	}
 	
 
 
