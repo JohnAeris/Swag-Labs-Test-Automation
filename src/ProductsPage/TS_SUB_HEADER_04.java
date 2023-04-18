@@ -69,7 +69,11 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_SH_01: Verify if the filter button is presented
+	void TC_SH_01() {
+		softAssert.assertTrue(filterButton.isDisplayed());
+		softAssert.assertAll();
+	}
 	
 
 

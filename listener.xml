@@ -75,6 +75,7 @@
 			<class name="ProductsPage.TS_SUB_HEADER_04"/>
 				<methods>
 					<include name="TC_SH_00"></include>
+					<include name="TC_SH_01"></include>
 					
 					
 					
