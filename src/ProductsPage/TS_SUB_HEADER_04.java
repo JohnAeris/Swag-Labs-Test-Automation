@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class TS_SUB_HEADER_04 {
 
