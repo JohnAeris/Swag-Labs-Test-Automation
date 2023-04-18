@@ -142,7 +142,42 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_SH_05: Verify if the price from low to high filter is working
+	void TC_SH_05() {
+		filter.selectByVisibleText("Price (low to high)"); // select the Price (low to high) filter
+		
+		List<Double> itemPriceList = new ArrayList<>(); // create new itemPriceList
+		List<WebElement> itemPrices = driver.findElements(By.className("inventory_item_price")); // get all the item prices
+		
+		for (WebElement price : itemPrices) { // iterate each item price
+			String itemPrice = price.getText(); // convert the item from WebElement to String
+			if (itemPrice.startsWith("$")) { // implement this condition for all item prices starts with dollar sign
+				itemPrice = itemPrice.replace("$", "").trim(); // cut and remove the Sauce Labs
+				Double itemPriceVal = Double.parseDouble(itemPrice); // convert the string into double
+				itemPriceList.add(itemPriceVal); // add the item price in the itemPriceList
+			}
+			else { // implement this condition for all item prices that is not started with a dollar sign
+				Double itemPriceVal = Double.parseDouble(itemPrice); // convert the string into double
+				itemPriceList.add(itemPriceVal); // add the item price in the itemPriceList
+			}
+		}
+		
+		int listSize = itemPriceList.size(); // get the total count of the list
+		
+		boolean isAscending = true; // true if the list is in ascending order else false
+		for (int i = 0; i < listSize - 1; i++) { // iterate from first item name to the last item name
+			if (itemPriceList.get(i) > itemPriceList.get(i + 1)) { // compare the first price if it is greater than to next price
+				isAscending = false; // if condition is true, the list is not low to high order
+				break;
+			}
+			else {
+				isAscending = true; // else, the list is in low to high order
+			}
+		}
+		
+		softAssert.assertTrue(isAscending);
+		softAssert.assertAll();
+	}
 	
 
 	
