@@ -81,7 +81,32 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertEquals(4, filterOptions);
 		softAssert.assertAll();
 	}
-
+	
+	@Test // TC_SH_03: Verify if the ascending name filter is working
+	void TC_SH_03() {
+		filter.selectByVisibleText("Name (A to Z)"); // select the Name (A to Z) filter
+		
+		List<String> itemNamesList = new ArrayList<>(); // create new itemNameList
+		List<WebElement> itemNames = driver.findElements(By.className("inventory_item_name")); // get all the item names
+		
+		for (WebElement name : itemNames) { // iterate each item name
+			String itemName = name.getText(); // convert the item from WebElement to String
+			itemNamesList.add(itemName); // add this item in the itemNameList
+		}
+		
+		int listSize = itemNamesList.size(); // get the total count of the list
+		
+		boolean isAscending = true; // true if the list is in ascending order else false
+		for (int i = 0; i < listSize - 1; i++) { // iterate from first item name to the last item name
+			if (itemNamesList.get(i).compareTo(itemNamesList.get(i+1)) > 0) { // compare the current item name to its next item name
+				isAscending = false; // if the two item names are not sorted, make the isSorted false
+				break; // stop the loop
+			} 
+		}
+		
+		softAssert.assertTrue(isAscending);
+		softAssert.assertAll();
+	}
 	
 
 	
