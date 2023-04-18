@@ -240,6 +240,19 @@ public class TS_SUB_HEADER_04 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_SH_08: Verify the spelling of all filter options
+	void TC_SH_08() {
+		WebElement filterOptions = driver.findElement(By.className("product_sort_container")); // find the dropdown element
+		List<WebElement> listFilterOptions = filterOptions.findElements(By.tagName("option")); // get the option tagname
+		List<String> listOptions = new ArrayList<>(); // create new list for the container
+		
+		for (WebElement filter : listFilterOptions) { // iterate to each filter option
+			String option = filter.getText(); // get the filter option name
+			listOptions.add(option); // add the filter option in the listOptions
+		}
+		
+		softAssert.assertEquals(4, listOptions.size()); // compare the expected total options and actual number of filter options
+		softAssert.assertAll();
+	}
 
 }

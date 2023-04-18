@@ -82,7 +82,7 @@
 					<include name="TC_SH_05"></include>
 					<include name="TC_SH_06"></include>
 					<include name="TC_SH_07"></include>
-					
+					<include name="TC_SH_08"></include>
 				</methods>
 		</classes>
 	</test>
