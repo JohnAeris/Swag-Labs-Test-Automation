@@ -72,7 +72,7 @@
 					<include name="TC_LMN_07"></include>
 				</methods>
 			</class>
-			<class name="ProductsPage.TS_SUB_HEADER_04"/>
+			<class name="ProductsPage.TS_SUB_HEADER_04">
 				<methods>
 					<include name="TC_SH_00"></include>
 					<include name="TC_SH_01"></include>
@@ -84,6 +84,7 @@
 					<include name="TC_SH_07"></include>
 					<include name="TC_SH_08"></include>
 				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
