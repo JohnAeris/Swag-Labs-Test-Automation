@@ -113,6 +113,12 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(itemImage.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_06: Verify if the add to cart button is presented
+	void TC_IC_06() {
+		softAssert.assertTrue(addToCartButton.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 }
