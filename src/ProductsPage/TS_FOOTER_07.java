@@ -120,7 +120,25 @@ public class TS_FOOTER_07 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_F_05: Verify if the linkedin button is working
+	void TC_F_05() throws MalformedURLException, IOException {
+		WebElement linkedin = linkedinButton.findElement(By.tagName("a"));
+		String linkedinLink = linkedin.getAttribute("href");
+		HttpURLConnection connection = (HttpURLConnection) new URL(linkedinLink).openConnection();
+		connection.setRequestMethod("GET");
+		connection.connect();
+		
+		int responseCode = connection.getResponseCode();
+		boolean isLinkWorking = false;
+		
+		if (responseCode < 400) {
+			isLinkWorking = true;
+		}
+		connection.disconnect();
+		
+		softAssert.assertTrue(isLinkWorking);
+		softAssert.assertAll();
+	}
 
 
 }
