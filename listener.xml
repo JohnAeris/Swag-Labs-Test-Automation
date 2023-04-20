@@ -100,7 +100,7 @@
 					<include name="TC_IC_10"></include>
 					<include name="TC_IC_11"></include>
 					<include name="TC_IC_12"></include>
-					
+					<include name="TC_IC_13"></include>
 				</methods>
 			</class>
 		</classes>

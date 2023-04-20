@@ -210,6 +210,16 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertAll();
 	}
 	
-
+	@Test // TC_IC_13: Verify if the cart icon is updated the number it displayed
+	void TC_IC_13() {
+		
+		addToCartButton.click();
+		
+		String expectedCount = "1";
+		String actualCount = driver.findElement(By.className("shopping_cart_badge")).getText();
+	
+		softAssert.assertEquals(expectedCount, actualCount);
+		softAssert.assertAll();
+	}
 
 }
