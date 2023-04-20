@@ -79,7 +79,26 @@ public class TS_FOOTER_07 {
 		softAssert.assertTrue(linkedinButton.isDisplayed());
 		softAssert.assertAll();
 	}
-
+	
+	@Test // TC_F_03: Verify if the twitter button is working
+	void TC_F_03() throws MalformedURLException, IOException {
+		WebElement twitter = twitterButton.findElement(By.tagName("a"));
+		String twitterLink = twitter.getAttribute("href");
+		HttpURLConnection connection = (HttpURLConnection) new URL(twitterLink).openConnection();
+		connection.setRequestMethod("GET");
+		connection.connect();
+		
+		int responseCode = connection.getResponseCode();
+		boolean isLinkWorking = false;
+		
+		if (responseCode < 400) {
+			isLinkWorking = true;
+		}
+		connection.disconnect();
+		
+		softAssert.assertTrue(isLinkWorking);
+		softAssert.assertAll();
+	}
 
 	
 

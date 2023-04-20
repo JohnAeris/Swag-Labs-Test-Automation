@@ -108,6 +108,7 @@
 					<include name="TC_F_00"></include>
 					<include name="TC_F_01"></include>
 					<include name="TC_F_02"></include>
+					<include name="TC_F_03"></include>
 				</methods>
 			</class>
 		</classes>
