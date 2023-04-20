@@ -67,5 +67,17 @@ public class TS_FOOTER_07 {
 		softAssert.assertTrue(twitterButton.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_F_01: Verify if the facebook button is presented
+	void TC_F_01() {
+		softAssert.assertTrue(facebookButton.isDisplayed());
+		softAssert.assertAll();
+	}
+	
+
+
+	
+
+
 
 }

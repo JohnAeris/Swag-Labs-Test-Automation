@@ -106,6 +106,7 @@
 			<class name="ProductsPage.TS_FOOTER_07">
 				<methods>
 					<include name="TC_F_00"></include>
+					<include name="TC_F_01"></include>
 				</methods>
 			</class>
 		</classes>
