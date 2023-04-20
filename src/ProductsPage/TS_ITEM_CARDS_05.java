@@ -128,6 +128,20 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(itemTitle.isEnabled());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_08: Verify if the item's title is working
+	void TC_IC_08() {
+		
+		WebElement itemTitle = driver.findElement(By.id("item_4_title_link"));
+		itemTitle.click();
+		
+		String expectedUrl = "https://www.saucedemo.com/inventory-item.html?id=4";
+		String actualUrl = driver.getCurrentUrl();
+		
+		
+		softAssert.assertEquals(expectedUrl, actualUrl);
+		softAssert.assertAll();
+	}
 
 
 }
