@@ -44,5 +44,10 @@ public class TS_FOOTER_07 {
 		driver.quit();
 	}
 	
+	// On Test Skip
+	public static void skipTest(String testCase) {
+		System.out.println(testCase + " ---------- Test Skipped");
+		throw new SkipException("Skipping this test");
+	}
 
 }
