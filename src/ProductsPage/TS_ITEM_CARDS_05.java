@@ -77,6 +77,15 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertEquals(6, totalItemDisplayed);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_02: Verify if the item's title is presented
+	void TC_IC_02() {
+		
+		WebElement itemTitle = driver.findElement(By.className("inventory_item_name"));
+	
+		softAssert.assertTrue(itemTitle.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 }

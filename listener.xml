@@ -89,6 +89,7 @@
 				<methods>
 					<include name="TC_IC_00"></include>
 					<include name="TC_IC_01"></include>
+					<include name="TC_IC_02"></include>
 
 				</methods>
 			</class>
