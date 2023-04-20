@@ -99,7 +99,26 @@ public class TS_FOOTER_07 {
 		softAssert.assertTrue(isLinkWorking);
 		softAssert.assertAll();
 	}
-
+	
+	@Test // TC_F_04: Verify if the facebook button is working
+	void TC_F_04() throws MalformedURLException, IOException {
+		WebElement facebook = facebookButton.findElement(By.tagName("a"));
+		String facebookLink = facebook.getAttribute("href");
+		HttpURLConnection connection = (HttpURLConnection) new URL(facebookLink).openConnection();
+		connection.setRequestMethod("GET");
+		connection.connect();
+		
+		int responseCode = connection.getResponseCode();
+		boolean isLinkWorking = false;
+		
+		if (responseCode < 400) {
+			isLinkWorking = true;
+		}
+		connection.disconnect();
+		
+		softAssert.assertTrue(isLinkWorking);
+		softAssert.assertAll();
+	}
 	
 
 
