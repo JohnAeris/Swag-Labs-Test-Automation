@@ -104,6 +104,15 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(itemPrice.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_05: Verify if the item's image is presented
+	void TC_IC_05() {
+		
+		WebElement itemImage = driver.findElement(By.className("inventory_item_img"));
+	
+		softAssert.assertTrue(itemImage.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 }
