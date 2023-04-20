@@ -153,6 +153,17 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(cartIconCount.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_10: Verify if the remove button is presented
+	void TC_IC_10() throws InterruptedException {
+		
+		addToCartButton.click();
+		Thread.sleep(300);
+		removeButton = driver.findElement(By.name("remove-sauce-labs-backpack"));
+	
+		softAssert.assertTrue(removeButton.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 }
