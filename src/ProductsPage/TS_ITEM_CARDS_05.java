@@ -39,6 +39,9 @@ public class TS_ITEM_CARDS_05 {
 		
 	}
 	
-
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 
 }
