@@ -67,5 +67,16 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertAll();
 	}
 	
+	@Test // TC_IC_01: Verify the total number of items presented
+	void TC_IC_01() {
+		
+		WebElement itemsContainer = driver.findElement(By.className("inventory_container"));
+		List<WebElement> itemList = itemsContainer.findElements(By.className("inventory_item"));
+		int totalItemDisplayed = itemList.size();
+		
+		softAssert.assertEquals(6, totalItemDisplayed);
+		softAssert.assertAll();
+	}
+
 
 }
