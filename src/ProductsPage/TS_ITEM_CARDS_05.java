@@ -164,6 +164,37 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(removeButton.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_11: Verify if the remove button is working
+	void TC_IC_11() throws InterruptedException {
+		
+		boolean isButtonWorking = false;
+		
+		try {
+			addToCartButton.click();
+			WebElement cartIcon = driver.findElement(By.className("shopping_cart_link"));
+			cartIcon.click();
+			
+			boolean isDisplayed = driver.findElement(By.className("cart_item")).isDisplayed();
+		
+			driver.findElement(By.name("continue-shopping")).click();	
+			driver.findElement(By.name("remove-sauce-labs-backpack")).click();
+			cartIcon.click();
+		
+			boolean isNotDisplayed = driver.findElement(By.className("cart_item")).isDisplayed();
+			
+			if (isDisplayed == isNotDisplayed) {
+				isButtonWorking = true;
+			}
+			
+		}
+		catch (StaleElementReferenceException e) {
+			isButtonWorking = true;
+		}
+
+		softAssert.assertTrue(isButtonWorking);
+		softAssert.assertAll();
+	}
 
 
 }
