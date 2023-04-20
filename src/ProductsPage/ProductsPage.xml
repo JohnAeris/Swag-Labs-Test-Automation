@@ -5,8 +5,9 @@
 	<classes>
 		<!--<class name="ProductsPage.TS_PRODUCTS_PAGE_01"/>
 		<class name="ProductsPage.TS_HEADER_02"/>
-		<class name="ProductsPage.TS_LEFT_MENU_NAVIGATION_03"/>-->
-		<class name="ProductsPage.TS_SUB_HEADER_04"/>
+		<class name="ProductsPage.TS_LEFT_MENU_NAVIGATION_03"/>
+		<class name="ProductsPage.TS_SUB_HEADER_04"/>-->
+		<class name="ProductsPage.TS_ITEM_CARDS_05"/>
 	</classes>
   </test> <!-- ProductsPageTest -->
 </suite> <!-- ProductsPageSuite -->
