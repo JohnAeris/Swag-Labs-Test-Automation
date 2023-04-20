@@ -68,5 +68,4 @@ public class TS_FOOTER_07 {
 		softAssert.assertAll();
 	}
 
-
 }
