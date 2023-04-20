@@ -119,6 +119,15 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(addToCartButton.isDisplayed());
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_07: Verify if the item's title is clickable
+	void TC_IC_07() {
+		
+		WebElement itemTitle = driver.findElement(By.className("inventory_item_name"));
+	
+		softAssert.assertTrue(itemTitle.isEnabled());
+		softAssert.assertAll();
+	}
 
 
 }
