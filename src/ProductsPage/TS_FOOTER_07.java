@@ -139,6 +139,14 @@ public class TS_FOOTER_07 {
 		softAssert.assertTrue(isLinkWorking);
 		softAssert.assertAll();
 	}
-
+	
+	@Test // TC_F_06 : Verify the copy right notice message
+	void TC_F_06() {
+		String expectedText = "© 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
+		String actualText = copyrightText.getText();
+		
+		softAssert.assertEquals(expectedText, actualText);
+		softAssert.assertAll();
+	}
 
 }
