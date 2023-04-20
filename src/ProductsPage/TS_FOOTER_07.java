@@ -17,6 +17,11 @@ public class TS_FOOTER_07 {
 		System.setProperty("webdriver.edge.driver", "D:\\Projects\\Test Automation\\Swag Labs\\drivers\\Edge\\edgedriver_win64\\msedgedriver.exe");
 	}
 	
+	private WebDriver driver;
+	private SoftAssert softAssert;
+	private WebElement usernameField, passwordField, loginButton;
+
+	
 	
 
 }
