@@ -39,6 +39,10 @@ public class TS_FOOTER_07 {
 		
 	}
 	
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 	
 
 }
