@@ -142,6 +142,17 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertEquals(expectedUrl, actualUrl);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_09: Verify if the add to cart button is working
+	void TC_IC_09() {
+
+		addToCartButton.click();
+		
+		WebElement cartIconCount = driver.findElement(By.className("shopping_cart_badge"));
+	
+		softAssert.assertTrue(cartIconCount.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 }

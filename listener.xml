@@ -96,6 +96,7 @@
 					<include name="TC_IC_06"></include>
 					<include name="TC_IC_07"></include>
 					<include name="TC_IC_08"></include>
+					<include name="TC_IC_09"></include>
 
 				</methods>
 			</class>
