@@ -8,7 +8,13 @@ import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class TS_FOOTER_07 {
 
@@ -20,6 +26,7 @@ public class TS_FOOTER_07 {
 	private WebDriver driver;
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton;
+	private WebElement twitterButton, facebookButton, linkedinButton, copyrightText;
 
 	
 	@BeforeMethod
@@ -37,6 +44,11 @@ public class TS_FOOTER_07 {
 		passwordField.sendKeys("secret_sauce");
 		loginButton.click();
 		
+		twitterButton = driver.findElement(By.className("social_twitter"));
+		facebookButton = driver.findElement(By.className("social_facebook"));
+		linkedinButton = driver.findElement(By.className("social_linkedin"));
+		copyrightText = driver.findElement(By.className("footer_copy"));
+		
 	}
 	
 	@AfterMethod
@@ -49,5 +61,12 @@ public class TS_FOOTER_07 {
 		System.out.println(testCase + " ---------- Test Skipped");
 		throw new SkipException("Skipping this test");
 	}
+	
+	@Test // TC_F_00: Verify if the twitter button is presented
+	void TC_F_00() {
+		softAssert.assertTrue(twitterButton.isDisplayed());
+		softAssert.assertAll();
+	}
+
 
 }
