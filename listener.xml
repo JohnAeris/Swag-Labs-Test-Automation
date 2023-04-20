@@ -107,6 +107,7 @@
 				<methods>
 					<include name="TC_F_00"></include>
 					<include name="TC_F_01"></include>
+					<include name="TC_F_02"></include>
 				</methods>
 			</class>
 		</classes>

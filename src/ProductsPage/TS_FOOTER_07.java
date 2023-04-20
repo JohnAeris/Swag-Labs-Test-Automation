@@ -74,6 +74,11 @@ public class TS_FOOTER_07 {
 		softAssert.assertAll();
 	}
 	
+	@Test // TC_F_02: Verify if the linkedin button is presented
+	void TC_F_02() {
+		softAssert.assertTrue(linkedinButton.isDisplayed());
+		softAssert.assertAll();
+	}
 
 
 	
