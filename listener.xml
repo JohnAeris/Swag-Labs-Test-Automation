@@ -85,6 +85,12 @@
 					<include name="TC_SH_08"></include>
 				</methods>
 			</class>
+			<class name="ProductsPage.TS_ITEM_CARDS_05">
+				<methods>
+					<include name="TC_IC_00"></include>
+
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>

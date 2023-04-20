@@ -1,6 +1,10 @@
 package ProductsPage;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -8,6 +12,7 @@ import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class TS_ITEM_CARDS_05 {
@@ -20,6 +25,7 @@ public class TS_ITEM_CARDS_05 {
 	private WebDriver driver;
 	private SoftAssert softAssert;
 	private WebElement usernameField, passwordField, loginButton;
+	private WebElement addToCartButton, removeButton, shoppingCartIcon;
 
 	
 	@BeforeMethod
@@ -37,6 +43,8 @@ public class TS_ITEM_CARDS_05 {
 		passwordField.sendKeys("secret_sauce");
 		loginButton.click();
 		
+		addToCartButton = driver.findElement(By.name("add-to-cart-sauce-labs-backpack"));
+		
 	}
 	
 	@AfterMethod
@@ -49,5 +57,15 @@ public class TS_ITEM_CARDS_05 {
 		System.out.println(testCase + " ---------- Test Skipped");
 		throw new SkipException("Skipping this test");
 	}
+	
+	@Test // TC_IC_00: Verify if the items are presented
+	void TC_IC_00() {
+		
+		WebElement item = driver.findElement(By.className("inventory_item"));
+		
+		softAssert.assertTrue(item.isDisplayed());
+		softAssert.assertAll();
+	}
+	
 
 }
