@@ -99,7 +99,8 @@
 					<include name="TC_IC_09"></include>
 					<include name="TC_IC_10"></include>
 					<include name="TC_IC_11"></include>
-
+					<include name="TC_IC_12"></include>
+					
 				</methods>
 			</class>
 		</classes>

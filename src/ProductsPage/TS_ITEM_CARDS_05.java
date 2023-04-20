@@ -195,6 +195,21 @@ public class TS_ITEM_CARDS_05 {
 		softAssert.assertTrue(isButtonWorking);
 		softAssert.assertAll();
 	}
+	
+	@Test // TC_IC_12: Verify if the item is added in the cart page correctly
+	void TC_IC_12() throws InterruptedException {
+		
+		addToCartButton.click();
+		Thread.sleep(300);
+		shoppingCartIcon = driver.findElement(By.className("shopping_cart_link"));
+		shoppingCartIcon.click();
+		
+		WebElement itemCard = driver.findElement(By.className("cart_item"));
+	
+		softAssert.assertTrue(itemCard.isDisplayed());
+		softAssert.assertAll();
+	}
+	
 
 
 }
