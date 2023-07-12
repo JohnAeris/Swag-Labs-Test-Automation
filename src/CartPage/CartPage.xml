@@ -5,8 +5,9 @@
     <classes>
       <!--<class name="CartPage.TS_CART_PAGE_01"/>
       <class name="CartPage.TS_HEADER_02"/>
-      <class name="CartPage.TS_SUB_HEADER_03"/>-->
-      <class name="CartPage.TS_LEFT_MENU_NAVIGATION_04"/>
+      <class name="CartPage.TS_SUB_HEADER_03"/>
+      <class name="CartPage.TS_LEFT_MENU_NAVIGATION_04"/>-->
+      <class name="CartPage.TS_FOOTER_06"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

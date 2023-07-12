@@ -163,6 +163,17 @@
 					<include name="TC_LMN_07"></include>
 				</methods>
 			</class>
+			<class name="CartPage.TS_FOOTER_06">
+				<methods>
+					<include name="TC_F_00"></include>
+					<include name="TC_F_01"></include>
+					<include name="TC_F_02"></include>
+					<include name="TC_F_03"></include>
+					<include name="TC_F_04"></include>
+					<include name="TC_F_05"></include>
+					<include name="TC_F_06"></include>
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
