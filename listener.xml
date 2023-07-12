@@ -103,6 +103,19 @@
 					<include name="TC_IC_13"></include>
 				</methods>
 			</class>
+			<class name="ProductsPage.TS_ITEM_DESCRIPTION_06">
+				<methods>
+					<include name="TC_ID_00"></include>
+					<include name="TC_ID_01"></include>
+					<include name="TC_ID_02"></include>
+					<include name="TC_ID_03"></include>
+					<include name="TC_ID_04"></include>
+					<include name="TC_ID_05"></include>
+					<include name="TC_ID_06"></include>
+					<include name="TC_ID_07"></include>
+					<include name="TC_ID_08"></include>
+				</methods>
+			</class>
 			<class name="ProductsPage.TS_FOOTER_07">
 				<methods>
 					<include name="TC_F_00"></include>

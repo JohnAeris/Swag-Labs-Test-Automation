@@ -9,7 +9,7 @@
 		<class name="ProductsPage.TS_SUB_HEADER_04"/>
 		<class name="ProductsPage.TS_ITEM_CARDS_05"/>-->
 		<class name="ProductsPage.TS_ITEM_DESCRIPTION_06"/>
-		<class name="ProductsPage.TS_FOOTER_07"/>
+		<!--<class name="ProductsPage.TS_FOOTER_07"/>-->
 	</classes>
   </test> <!-- ProductsPageTest -->
 </suite> <!-- ProductsPageSuite -->
