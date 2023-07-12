@@ -5,6 +5,7 @@
 	<listeners>
 		<listener class-name="LoginPage.Listeners"></listener>
 		<listener class-name="ProductsPage.Listeners"></listener>
+		<listener class-name="CartPage.Listeners"></listener>
 	</listeners>
 	
 	<test name="SwagLabs">
@@ -125,6 +126,24 @@
 					<include name="TC_F_04"></include>
 					<include name="TC_F_05"></include>
 					<include name="TC_F_06"></include>
+				</methods>
+			</class>
+			<class name="CartPage.TS_CART_PAGE_01">
+				<methods>
+					<include name="TC_CP_00"></include>
+					<include name="TC_CP_01"></include>
+				</methods>
+			</class>
+			<class name="CartPage.TS_HEADER_02">
+				<methods>
+					<include name="TC_H_00"></include>
+					<include name="TC_H_01"></include>
+					<include name="TC_H_02"></include>
+					<include name="TC_H_03"></include>
+					<include name="TC_H_04"></include>
+					<include name="TC_H_05"></include>
+					<include name="TC_H_06"></include>
+					<include name="TC_H_07"></include>
 				</methods>
 			</class>
 		</classes>

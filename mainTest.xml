@@ -3,7 +3,8 @@
 
 <suite name="MainSuite">
 	<suite-files>
-		<!--<suite-file path="D:\Projects\Test Automation\Swag Labs\src\LoginPage\LoginPage.xml"/>-->
-		<suite-file path="D:\Projects\Test Automation\Swag Labs\src\ProductsPage\ProductsPage.xml"/>
+		<!--<suite-file path="D:\Projects\Test Automation\Swag Labs\src\LoginPage\LoginPage.xml"/>
+		<suite-file path="D:\Projects\Test Automation\Swag Labs\src\ProductsPage\ProductsPage.xml"/>-->
+		<suite-file path="D:\Projects\Test Automation\Swag Labs\src\CartPage\CartPage.xml"/>
 	</suite-files>
 </suite>
