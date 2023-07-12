@@ -3,8 +3,9 @@
 <suite name="CartPageSuite">
   <test thread-count="5" name="CartPageTest">
     <classes>
-      <!--<class name="CartPage.TS_CART_PAGE_01"/>-->
-      <class name="CartPage.TS_HEADER_02"/>
+      <!--<class name="CartPage.TS_CART_PAGE_01"/>
+      <class name="CartPage.TS_HEADER_02"/>-->
+      <class name="CartPage.TS_SUB_HEADER_03"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
